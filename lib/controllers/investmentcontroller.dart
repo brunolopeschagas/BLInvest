@@ -1,5 +1,5 @@
 import '../models/investment.dart';
-import '../services/DatabaseHelper.dart';
+import '../services/databasehelper.dart';
 
 class InvestmentController {
   DatabaseHelper dbHelper = DatabaseHelper();
