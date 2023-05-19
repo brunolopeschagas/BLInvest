@@ -8,9 +8,13 @@ void main() {
     FoundsExplorerParser foundsExplorerParser = FoundsExplorerParser();
     FinancialIndicator financialIndicator =
         foundsExplorerParser.convert(foundsExplorerData);
-    double expected = 6.738;
+    double expectedLiquidity = 6.738;
+    double expectedLastYeld = 1;
+    double dividendYeld = 1.2;
 
-    expect(financialIndicator.liquidity, expected);
+    expect(financialIndicator.liquidity, expectedLiquidity);
+    expect(financialIndicator.lastYeld, expectedLastYeld);
+    expect(financialIndicator.dividendYeld, dividendYeld);
   });
 }
 

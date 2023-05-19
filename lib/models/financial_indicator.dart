@@ -18,5 +18,9 @@ class FinancialIndicator {
       required this.pVP,
       required this.profitabilityMonth});
 
-  FinancialIndicator.liquid({required this.liquidity});
+  FinancialIndicator.liquid(
+      {required this.liquidity,
+      required this.lastYeld,
+      required this.dividendYeld,
+      required this.netWorth});
 }
