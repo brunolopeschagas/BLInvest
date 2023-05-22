@@ -11,10 +11,18 @@ void main() {
     double expectedLiquidity = 6.738;
     double expectedLastYeld = 1;
     double dividendYeld = 1.2;
+    double netWorth = 366.4;
+    double bookValue = 98.28;
+    double profitabilityMonth = 3.27;
+    double pVP = 0.88;
 
     expect(financialIndicator.liquidity, expectedLiquidity);
     expect(financialIndicator.lastYeld, expectedLastYeld);
     expect(financialIndicator.dividendYeld, dividendYeld);
+    expect(financialIndicator.netWorth, netWorth);
+    expect(financialIndicator.bookValue, bookValue);
+    expect(financialIndicator.profitabilityMonth, profitabilityMonth);
+    expect(financialIndicator.pVP, pVP);
   });
 }
 

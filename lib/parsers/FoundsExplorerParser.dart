@@ -14,11 +14,18 @@ class FoundsExplorerParser implements SiteDataParser {
     double dividendYeld =
         double.parse(sanitize.sanitizeToNumericOnly(data[17]));
     double netWorth = double.parse(sanitize.sanitizeToNumericOnly(data[23]));
+    double bookValue = double.parse(sanitize.sanitizeToNumericOnly(data[29]));
+    double profitabilityMonth =
+        double.parse(sanitize.sanitizeToNumericOnly(data[35]));
+    double pVP = double.parse(sanitize.sanitizeToNumericOnly(data[41]));
     FinancialIndicator financialsIndicators = FinancialIndicator.liquid(
         liquidity: liquidity,
         lastYeld: lastYeld,
         dividendYeld: dividendYeld,
-        netWorth: netWorth);
+        netWorth: netWorth,
+        bookValue: bookValue,
+        pVP: pVP,
+        profitabilityMonth: profitabilityMonth);
 
     return financialsIndicators;
   }

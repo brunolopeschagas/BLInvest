@@ -22,5 +22,8 @@ class FinancialIndicator {
       {required this.liquidity,
       required this.lastYeld,
       required this.dividendYeld,
-      required this.netWorth});
+      required this.netWorth,
+      required this.bookValue,
+      required this.pVP,
+      required this.profitabilityMonth});
 }
