@@ -6,9 +6,8 @@ import 'package:test/test.dart';
 void main() {
   test('get data from web', () async {
     DataScraper dataScraper = DataScraper(
-        websiteUrl: 'https://www.fundsexplorer.com.br/funds/pord11',
-        websSiteSelector: '#main-indicators-carousel');
-
+        websiteUrl: 'http://localhost:8080/http/foundsexplorerlocal.html',
+        websSiteSelector: '#table-ranking > tbody > tr');
     var data = await dataScraper.scrapeData();
     var result = const LineSplitter().convert(data.first);
 
