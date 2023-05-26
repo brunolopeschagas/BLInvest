@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-import 'package:blinvest/models/financial_indicator.dart';
+import 'package:blinvest/models/fii.dart';
 import 'package:blinvest/parsers/SiteDataParser.dart';
 import 'package:blinvest/parsers/sanitize.dart';
 
 class FoundsExplorerParser implements SiteDataParser {
   @override
-  FinancialIndicator convert(String dataSite) {
+  Fii convert(String dataSite) {
     Sanitize sanitize = Sanitize();
     var data = const LineSplitter().convert(dataSite);
     double liquidity = double.parse(sanitize.removeSpaces(data[4]));
@@ -18,7 +18,8 @@ class FoundsExplorerParser implements SiteDataParser {
     double profitabilityMonth =
         double.parse(sanitize.sanitizeToNumericOnly(data[35]));
     double pVP = double.parse(sanitize.sanitizeToNumericOnly(data[41]));
-    FinancialIndicator financialsIndicators = FinancialIndicator.liquid(
+    Fii financialsIndicators = Fii.liquid(
+        name: 'random_name',
         liquidity: liquidity,
         lastYeld: lastYeld,
         dividendYeld: dividendYeld,

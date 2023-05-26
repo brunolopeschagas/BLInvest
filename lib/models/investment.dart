@@ -1,11 +1,11 @@
-import 'package:blinvest/models/financial_indicator.dart';
+import 'package:blinvest/models/fii.dart';
 
 class Investment {
   late int id;
   late String ticker;
   late double priceBuy;
   late double priceSale;
-  late FinancialIndicator financialIndicator;
+  late Fii financialIndicator;
 
   Investment(
       {required this.ticker, required this.priceBuy, required this.priceSale}) {

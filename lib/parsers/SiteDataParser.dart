@@ -1,5 +1,5 @@
-import 'package:blinvest/models/financial_indicator.dart';
+import 'package:blinvest/models/fii.dart';
 
 abstract class SiteDataParser {
-  FinancialIndicator convert(String dataSite);
+  Fii convert(String dataSite);
 }

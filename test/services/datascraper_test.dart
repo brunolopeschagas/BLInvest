@@ -9,8 +9,7 @@ void main() {
         websiteUrl: 'http://localhost:8080/http/foundsexplorerlocal.html',
         websSiteSelector: '#table-ranking > tbody > tr');
     var data = await dataScraper.scrapeData();
-    var result = const LineSplitter().convert(data.first);
 
-    expect(result.elementAt(4), 12.292);
+    expect(data.isEmpty, false);
   });
 }

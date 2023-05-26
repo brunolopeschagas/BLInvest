@@ -1,4 +1,5 @@
-class FinancialIndicator {
+class Fii {
+  String name;
   double value = 0;
   double liquidity = 0;
   double lastYeld = 0;
@@ -8,8 +9,9 @@ class FinancialIndicator {
   double pVP = 0;
   double profitabilityMonth = 0;
 
-  FinancialIndicator(
-      {required this.value,
+  Fii(
+      {required this.name,
+      required this.value,
       required this.liquidity,
       required this.lastYeld,
       required this.dividendYeld,
@@ -18,8 +20,9 @@ class FinancialIndicator {
       required this.pVP,
       required this.profitabilityMonth});
 
-  FinancialIndicator.liquid(
-      {required this.liquidity,
+  Fii.liquid(
+      {required this.name,
+      required this.liquidity,
       required this.lastYeld,
       required this.dividendYeld,
       required this.netWorth,

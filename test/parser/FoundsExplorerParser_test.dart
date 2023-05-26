@@ -1,4 +1,4 @@
-import 'package:blinvest/models/financial_indicator.dart';
+import 'package:blinvest/models/fii.dart';
 import 'package:blinvest/parsers/FoundsExplorerParser.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -6,8 +6,7 @@ void main() {
   test('parse data from foundsexplorer pattern', () {
     String foundsExplorerData = simulateData();
     FoundsExplorerParser foundsExplorerParser = FoundsExplorerParser();
-    FinancialIndicator financialIndicator =
-        foundsExplorerParser.convert(foundsExplorerData);
+    Fii financialIndicator = foundsExplorerParser.convert(foundsExplorerData);
     double expectedLiquidity = 6.738;
     double expectedLastYeld = 1;
     double dividendYeld = 1.2;
